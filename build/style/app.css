@@ -1,0 +1,58 @@
+body {
+  margin: 0px;
+  padding: 0px; }
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+
+a {
+  outline: none;
+  outline-color: none;
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    outline: none; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px; }
+
+header .wrrap-header {
+  border-bottom: 1px solid #175456;
+  background-color: #172A3A; }
+  header .wrrap-header ul {
+    display: block;
+    padding: 25px 0px;
+    margin: 0px 10px; }
+    header .wrrap-header ul li {
+      display: inline-block; }
+      header .wrrap-header ul li a {
+        border: 1px solid #4CCEA9;
+        background-color: #175456;
+        color: #FFD472;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: .3s;
+        font-weight: bold;
+        font-family: 'Roboto', sans-serif; }
+
+.main-section {
+  background-color: #172A3A; }
+  .main-section .wrrap-code {
+    padding: 20px 10px; }
+    .main-section .wrrap-code .code-section-wrraper {
+      width: 32.8%;
+      display: inline-block;
+      border: 1px solid #4CCEA9; }
+      .main-section .wrrap-code .code-section-wrraper h1 {
+        color: #FFD472;
+        background-color: #175456;
+        font-size: 19px;
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        padding: 10px; }
+      .main-section .wrrap-code .code-section-wrraper .code {
+        width: 100%; }
+
+/*# sourceMappingURL=app.css.map*/

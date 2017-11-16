@@ -1,0 +1,51 @@
+header {
+    .wrrap-header {
+        border-bottom: 1px solid $english_green;
+        background-color: $yankees_blue;
+      ul {
+          display: block;
+          padding: 25px 0px;
+          margin: 0px 10px;
+          li {
+            display: inline-block;
+            a {
+                border: 1px solid $eucalyptus;
+                background-color: $english_green;
+                color: $orange_yellow;
+                padding: 10px 20px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: .3s;
+                font: {
+                    weight: bold;
+                    family: 'Roboto', sans-serif;
+                }
+            }
+          }
+      }
+    }
+}
+.main-section {
+    background-color: $yankees_blue;
+    .wrrap-code {
+        padding: 20px 10px;
+        .code-section-wrraper {
+            width: 32.8%;
+            display: inline-block;
+            border: 1px solid $eucalyptus;
+            h1  {
+                color: $orange_yellow;
+                background-color: $english_green;
+                font: {
+                    size: 19px;
+                    weight: 600;
+                    family: 'Roboto', sans-serif;
+                }
+                padding: 10px;
+            }
+            .code {
+                width: 100%;
+            }
+        }
+    }
+}
