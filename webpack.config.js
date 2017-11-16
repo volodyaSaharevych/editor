@@ -14,13 +14,6 @@ var config = {
     entry   : { 
         app    : appIndex,
         style  : styleIndex,
-        vendor : [
-            'assets/libs/codemirror/codemirror-5.31.0/lib/codemirror.js',
-            'assets/libs/codemirror/codemirror-5.31.0/mode/xml/xml.js',
-            'assets/libs/codemirror/codemirror-5.31.0/mode/htmlmixed/htmlmixed.js',
-            'assets/libs/codemirror/codemirror-5.31.0/mode/css/css.js',
-            'assets/libs/codemirror/codemirror-5.31.0/mode/javascript/javascript.js'
-        ]
     },
     output  : {
         path       : dist,
@@ -48,7 +41,12 @@ var config = {
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.js'),
+        // new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.js'),
+        // 'assets/libs/codemirror/codemirror-5.31.0/lib/codemirror.js',
+        // 'assets/libs/codemirror/codemirror-5.31.0/mode/xml/xml.js',
+        // 'assets/libs/codemirror/codemirror-5.31.0/mode/htmlmixed/htmlmixed.js',
+        // 'assets/libs/codemirror/codemirror-5.31.0/mode/css/css.js',
+        // 'assets/libs/codemirror/codemirror-5.31.0/mode/javascript/javascript.js'
         new extractTextPlugin({
             filename  : 'style/app.css',
             allChunks : true,
