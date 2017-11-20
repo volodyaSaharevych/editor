@@ -1,26 +1,32 @@
-var path               = require('path');
-var webpack            = require('webpack');
-var webpackDevServer   = require('webpack-dev-server');
-var extractTextPlugin  = require('extract-text-webpack-plugin');
-var resolve            = path.resolve;
-var rootDir            = resolve ( __dirname);
-var dist               = resolve(rootDir, 'build')
-var appIndex           = resolve(rootDir, 'app/');
-var styleIndex         = resolve(rootDir, './assets/style/main.scss');
+'use strickt';
 
-var config = {
+const path               = require('path');
+const webpack            = require('webpack');
+const webpackDevServer   = require('webpack-dev-server');
+const extractTextPlugin  = require('extract-text-webpack-plugin');
+const resolve            = path.resolve;
+const rootDir            = resolve ( __dirname);
+const dist               = resolve(rootDir, 'public')
+const appIndex           = resolve(rootDir, 'app/');
+const styleIndex         = resolve(rootDir, './assets/style/main.scss');
+const NODE_ENV           = process.env.NODE_ENV || 'development';
+
+const config = {
     context : __dirname + '/app',
-    watch   : true,
+    watch   : NODE_ENV == 'development',
+    watchOptions : {
+        aggregateTimeout : 100
+    },
     entry   : { 
         app    : appIndex,
         style  : styleIndex,
     },
     output  : {
         path       : dist,
-        publicPath : '/build',
+        publicPath : '/public',
         filename   : 'js/[name].js',
     },
-    devtool   : "sourcemap",
+    devtool   :  NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : null,
     devServer : {
         host      : 'localhost',
         port      : 1313,
@@ -41,12 +47,6 @@ var config = {
         ]
     },
     plugins: [
-        // new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.js'),
-        // 'assets/libs/codemirror/codemirror-5.31.0/lib/codemirror.js',
-        // 'assets/libs/codemirror/codemirror-5.31.0/mode/xml/xml.js',
-        // 'assets/libs/codemirror/codemirror-5.31.0/mode/htmlmixed/htmlmixed.js',
-        // 'assets/libs/codemirror/codemirror-5.31.0/mode/css/css.js',
-        // 'assets/libs/codemirror/codemirror-5.31.0/mode/javascript/javascript.js'
         new extractTextPlugin({
             filename  : 'style/app.css',
             allChunks : true,

@@ -1,44 +1,38 @@
 module.exports = function ( moduleApp ) {
     moduleApp.controller('HomeCtrl', homeCtrl );
     
-    function homeCtrl ( $scope, $location ){
-        var  frames = window.frames || window.document.frames;      
-        $scope.config_cmr = {
-            html : {
-                mode             : "xml",
-                htmlMode         : true,
-                lineNumbers      : true,
-                theme            : "material",
-                indentWithTabs   : false,
-                readOnly         : false,
-                selectionPointer : true,
-                htmlMode         : true,
-                matchClosing     : true  
-            },
-            css : {
-                lineNumbers    : true,
-                mode           : "text/css",
-                theme          : "material",
-                indentWithTabs : false,
-                readOnly       : false
-            },
-            js : {
-                lineNumbers    : true,
-                mode           : "text/javascript",
-                theme          : "material",
-                indentWithTabs : false,
-                readOnly       : false,
-                matchBrackets  : true
-            }
+    function homeCtrl ( $scope, $location ){  
+        $scope.config_html = {
+            mode             : "xml",
+            lineNumbers      : true,
+            theme            : "material",
+            indentWithTabs   : false,
+            selectionPointer : true,
+            htmlMode         : true,
+            matchClosing     : true,
+            gutters          : ['CodeMirror-lint-markers']  
+        };
+        $scope.config_css = {
+            lineNumbers    : true,
+            mode           : "css",
+            theme          : "material",
+            indentWithTabs : false,
+            gutters        : ['CodeMirror-lint-markers'],
+        }
+        $scope.config_js = {
+            lineNumbers    : true,
+            mode           : "javascript",
+            theme          : "material",
+            indentWithTabs : false,
+            matchBrackets  : true,
+            gutters        : ['CodeMirror-lint-markers'],
+        };
+        $scope.codemirrorLoaded = function( _editor ) {
+            
+            var _doc = _editor.getDoc();
+            _editor.setSize( "100%" , 450);
+
         };
 
-        editor_html = CodeMirror(document.getElementById("code_html"), config_cmr.html);
-        editor_html.setSize( "100%" , 450);
-
-        editor_css = CodeMirror(document.getElementById("code_css"), config_cmr.css);
-        editor_css.setSize( "100%" , 450);
-    
-        editor_js = CodeMirror(document.getElementById("code_js"), config_cmr.js);
-        editor_js.setSize( "100%" , 450);
     }
 }
