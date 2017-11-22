@@ -1,6 +1,5 @@
 header {
     .wrrap-header {
-        border-bottom: 1px solid $english_green;
         background-color: $yankees_blue;
       ul {
           display: block;
@@ -28,10 +27,13 @@ header {
 .main-section {
     background-color: $yankees_blue;
     .wrrap-code {
-        padding: 20px 10px;
+        border-top: 6px solid $eucalyptus;
+        border-bottom: 6px solid $eucalyptus;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .code-section-wrraper {
-            width: 32.8%;
-            display: inline-block;
+            flex: 1;
             border: 1px solid $eucalyptus;
             h1  {
                 color: $orange_yellow;
@@ -49,3 +51,4 @@ header {
         }
     }
 }
+
