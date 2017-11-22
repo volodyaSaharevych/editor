@@ -11,12 +11,19 @@ module.exports = function( grunt ) {
                         'assets/libs/codemirror/codemirror-5.31.0/mode/xml/xml.js',
                         'assets/libs/codemirror/codemirror-5.31.0/mode/htmlmixed/htmlmixed.js',
                         'assets/libs/codemirror/codemirror-5.31.0/mode/css/css.js',
-                        'assets/libs/codemirror/codemirror-5.31.0/mode/javascript/javascript.js'
+						'assets/libs/codemirror/codemirror-5.31.0/mode/javascript/javascript.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/foldcode.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/foldgutter.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/comment-fold.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/xml-fold.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/indent-fold.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/brace-fold.js'
 					],
 					'./public/style/vendor.css' : [
 						'node_modules/bootstrap/dist/css/bootstrap.min.css',
 						'assets/libs/codemirror/codemirror-5.31.0/lib/codemirror.css',
-						'assets/libs/codemirror/codemirror-5.31.0/theme/material.css'
+						'assets/libs/codemirror/codemirror-5.31.0/theme/material.css',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/foldgutter.css'
 					]
 				}
 			}
