@@ -14,6 +14,7 @@ module.exports = function ( moduleApp ) {
             matchTags        : { bothTags : true },
             matchBrackets    : true,
             autoCloseTags    : true,
+            lineWrapping     : false,
             gutters          : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         };
         $scope.config_css = {
@@ -22,6 +23,7 @@ module.exports = function ( moduleApp ) {
             theme          : "material",
             indentWithTabs : false,
             foldGutter     : true,
+            lineWrapping   : true,
             gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         }
         $scope.config_js = {
@@ -31,6 +33,7 @@ module.exports = function ( moduleApp ) {
             indentWithTabs : false,
             matchBrackets  : true,
             foldGutter     : true,
+            lineWrapping   : true,
             gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         };
         $scope.codemirrorLoaded = function( _editor ) {

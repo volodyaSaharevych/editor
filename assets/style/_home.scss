@@ -34,7 +34,7 @@ header {
         justify-content: space-between;
         .code-section-wrraper {
             flex: 1;
-            border: 1px solid $eucalyptus;
+            // border: 1px solid $eucalyptus;
             h1  {
                 color: $orange_yellow;
                 background-color: $english_green;
@@ -49,6 +49,11 @@ header {
                 width: 100%;
             }
         }
+        .code-section-wrraper:nth-child(2) {
+            border-right : 6px solid $eucalyptus;
+            border-left : 6px solid $eucalyptus;
+        }
+
     }
 }
 
