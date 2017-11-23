@@ -10,14 +10,19 @@ module.exports = function ( moduleApp ) {
             selectionPointer : true,
             htmlMode         : true,
             matchClosing     : true,
-            gutters          : ['CodeMirror-lint-markers']  
+            foldGutter       : true,
+            matchTags        : { bothTags : true },
+            matchBrackets    : true,
+            autoCloseTags    : true,
+            gutters          : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         };
         $scope.config_css = {
             lineNumbers    : true,
             mode           : "css",
             theme          : "material",
             indentWithTabs : false,
-            gutters        : ['CodeMirror-lint-markers'],
+            foldGutter     : true,
+            gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         }
         $scope.config_js = {
             lineNumbers    : true,
@@ -25,14 +30,13 @@ module.exports = function ( moduleApp ) {
             theme          : "material",
             indentWithTabs : false,
             matchBrackets  : true,
-            gutters        : ['CodeMirror-lint-markers'],
+            foldGutter     : true,
+            gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
         };
         $scope.codemirrorLoaded = function( _editor ) {
-            
             var _doc = _editor.getDoc();
             _editor.setSize( "100%" , 450);
-
+            _editor.setOption('autoRefresh', true);
         };
-
     }
 }

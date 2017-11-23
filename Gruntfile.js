@@ -17,7 +17,10 @@ module.exports = function( grunt ) {
 						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/comment-fold.js',
 						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/xml-fold.js',
 						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/indent-fold.js',
-						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/brace-fold.js'
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/brace-fold.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/edit/matchtags.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/edit/closetag.js'
+
 					],
 					'./public/style/vendor.css' : [
 						'node_modules/bootstrap/dist/css/bootstrap.min.css',
