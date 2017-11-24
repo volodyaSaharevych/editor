@@ -1,7 +1,7 @@
 module.exports = function ( moduleApp ) {
     moduleApp.controller('HomeCtrl', homeCtrl );
     
-    function homeCtrl ( $scope, $location ){  
+    function homeCtrl ( $scope, $location, $http ){  
         $scope.config_html = {
             mode             : "xml",
             lineNumbers      : true,
@@ -16,6 +16,7 @@ module.exports = function ( moduleApp ) {
             autoCloseTags    : true,
             lineWrapping     : false,
             gutters          : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            value            : ''
         };
         $scope.config_css = {
             lineNumbers    : true,
@@ -25,6 +26,7 @@ module.exports = function ( moduleApp ) {
             foldGutter     : true,
             lineWrapping   : true,
             gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            value          : ''
         }
         $scope.config_js = {
             lineNumbers    : true,
@@ -35,6 +37,7 @@ module.exports = function ( moduleApp ) {
             foldGutter     : true,
             lineWrapping   : true,
             gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            value          : ''
         };
         $scope.codemirrorLoaded = function( _editor ) {
             var _doc = _editor.getDoc();
