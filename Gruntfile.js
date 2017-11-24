@@ -19,14 +19,16 @@ module.exports = function( grunt ) {
 						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/indent-fold.js',
 						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/brace-fold.js',
 						'assets/libs/codemirror/codemirror-5.31.0/addon/edit/matchtags.js',
-						'assets/libs/codemirror/codemirror-5.31.0/addon/edit/closetag.js'
-
+						'assets/libs/codemirror/codemirror-5.31.0/addon/edit/closetag.js',
+						'node_modules/jquery/dist/jquery.min.js',
+						'node_modules/jquery-resizable/resizable.js',
 					],
 					'./public/style/vendor.css' : [
 						'node_modules/bootstrap/dist/css/bootstrap.min.css',
 						'assets/libs/codemirror/codemirror-5.31.0/lib/codemirror.css',
 						'assets/libs/codemirror/codemirror-5.31.0/theme/material.css',
-						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/foldgutter.css'
+						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/foldgutter.css',
+						'node_modules/jquery-resizable/resizable.css'
 					]
 				}
 			}
