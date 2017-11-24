@@ -6,7 +6,7 @@ module.exports = function ( moduleApp ) {
             restrict : 'A',
             scope : {},
             link : function ( scope, element, attr ) {
-                element.resizable({  direction: 'right' });
+               element.resizable({ handleSelector: '.resize-handl', resizeHeight: false, direction : 'horizontal'});
             }
         }
     }

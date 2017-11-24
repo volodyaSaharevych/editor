@@ -1,14 +1,16 @@
 <section class="main-section" ng-controller="HomeCtrl">
     <div class="wrrap-code">
-        <div class="code-section-wrraper">
+        <div resizables class="code-section-wrraper code-html">
             <h1>HTML</h1>
             <div id="code_html" ui-codemirror="{ onLoad : codemirrorLoaded }"  ui-codemirror-opts="config_html" class="code html-section"></div>
         </div>
-        <div class="code-section-wrraper">
+        <div class="resize"></div>
+        <div resizables class="code-section-wrraper code-css">
             <h1>CSS</h1>
             <div id="code_css" ui-codemirror="{ onLoad : codemirrorLoaded }" ui-codemirror-opts="config_css" class="code css-section"></div>
         </div>
-        <div class="code-section-wrraper">
+        <div class="resize"></div>
+        <div resizables class="code-section-wrraper code-js">
             <h1>JS</h1>
             <div id="code_js" ui-codemirror="{ onLoad : codemirrorLoaded }" ui-codemirror-opts="config_js" class="code js-section"></div>
         </div>
