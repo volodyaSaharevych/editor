@@ -54,5 +54,7 @@ module.exports = function ( moduleApp ) {
             _editor.setSize( "100%" , 450);
             _editor.setOption('autoRefresh', true);
         };
+        localStorage.setItem('_isLogged', false)
+        $scope.isLogged = localStorage.getItem('_isLogged')
     }
 }
