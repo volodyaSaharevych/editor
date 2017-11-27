@@ -16,7 +16,17 @@ module.exports = function ( moduleApp ) {
             autoCloseTags    : true,
             lineWrapping     : false,
             gutters          : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-            value            : ''
+            value            : '<!DOCTYPE html>\n' +
+           '<html lang="en">\n'+
+           '<head>\n'+
+                '<meta charset="UTF-8"/>\n'+
+                '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>\n'+
+                '<meta http-equiv="X-UA-Compatible" content="ie=edge"/>\n'+
+                '<title>Document</title>\n'+
+            '</head>\n'+
+            '<body>\n'+   
+            '</body>\n'+
+            '</html>'
         };
         $scope.config_css = {
             lineNumbers    : true,
@@ -26,7 +36,7 @@ module.exports = function ( moduleApp ) {
             foldGutter     : true,
             lineWrapping   : true,
             gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-            value          : ''
+            value          : '/* Styles go here */'
         }
         $scope.config_js = {
             lineNumbers    : true,
@@ -37,7 +47,7 @@ module.exports = function ( moduleApp ) {
             foldGutter     : true,
             lineWrapping   : true,
             gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-            value          : ''
+            value          : '// Scripts go here'
         };
         $scope.codemirrorLoaded = function( _editor ) {
             var _doc = _editor.getDoc();
