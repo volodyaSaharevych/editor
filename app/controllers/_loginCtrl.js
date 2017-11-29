@@ -1,5 +1,6 @@
 module.exports = function ( moduleApp ) {
-    moduleApp.controller('HoginCtrl',  [ '$scope','$location' ], loginCtrl );
+    moduleApp.controller('HoginCtrl', loginCtrl );
     
         function loginCtrl ( $scope, $location ) {}
+        loginCtrl.$inject = [ '$scope','$location' ];
 }

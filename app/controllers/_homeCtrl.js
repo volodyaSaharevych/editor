@@ -1,7 +1,7 @@
 module.exports = function ( moduleApp ) {
     moduleApp.controller('HomeCtrl', homeCtrl );
     
-    function homeCtrl ( $scope, $location, $http ){  
+    function homeCtrl ( $scope, $location ){  
         $scope.config_html = {
             mode             : "xml",
             lineNumbers      : true,
@@ -55,4 +55,5 @@ module.exports = function ( moduleApp ) {
             _editor.setOption('autoRefresh', true);
         };
     }
+    homeCtrl.$inject = [  '$scope', '$location' ];
 }

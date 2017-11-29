@@ -5,6 +5,6 @@ var onlineEditorApp = angular.module('onlineEditorApp', ['ngRoute','ui.codemirro
 require('./configs')( onlineEditorApp );
 require('./controllers')( onlineEditorApp );
 require('./directives')( onlineEditorApp );
-// require('./services')( onlineEditorApp );
+require('./services')( onlineEditorApp );
 
 
