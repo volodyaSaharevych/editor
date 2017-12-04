@@ -1,5 +1,6 @@
 module.exports = function ( moduleApp ) {
     moduleApp.config( function( $routeProvider , $locationProvider ) {
+        
         $routeProvider
                     .when('/', {
                         templateUrl : './../../views/home.html',
