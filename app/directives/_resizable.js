@@ -1,5 +1,5 @@
 module.exports = function ( moduleApp ) {
-    moduleApp.directive( 'resizables', resizable);
+    moduleApp.directive( 'resizables', resizable );
 
     function resizable() {
         return {
