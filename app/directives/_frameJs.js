@@ -6,10 +6,14 @@ module.exports = function ( moduleApp ){
             attrs.$observe('ngModel', function( value ){ 
                 scope.$watch( value, function( newValue ){ 
                     var script = '<script type="text/javascript">' + newValue + '</script>',
-                        scriptIfrmae = angular.element('#iframeResult').contents().find('body');
+                        scriptIfrmae = angular.element('#iframeResult').contents().find('body'),
+                        success = JSHINT(newValue);
 
-                    scriptIfrmae.find("script:not([src])").remove();
-                    scriptIfrmae.append(script); 
+                    if( success ) {
+                        scriptIfrmae.find("script:not([src])").remove();
+                        scriptIfrmae.append(script); 
+                    }
+                    
                 });
             });
         }
