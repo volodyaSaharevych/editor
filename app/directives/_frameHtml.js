@@ -5,6 +5,9 @@ module.exports = function ( moduleApp ){
         function link( scope, element, attrs, ngModel ) {
             attrs.$observe('ngModel', function( value ){ 
                 scope.$watch( value, function( newValue ){ 
+                    var htmlIfrmae = angular.element('#iframeResult').contents().find('body');
+                    htmlIfrmae.empty();
+                    htmlIfrmae.html(newValue); 
                 });
             });
         }

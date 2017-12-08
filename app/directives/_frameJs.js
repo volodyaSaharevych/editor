@@ -6,7 +6,7 @@ module.exports = function ( moduleApp ){
             attrs.$observe('ngModel', function( value ){ 
                 scope.$watch( value, function( newValue ){ 
                     var script = '<script type="text/javascript">' + newValue + '</script>',
-                        scriptIfrmae = angular.element('#iframeResult').contents().find('body'),
+                        scriptIfrmae = angular.element('#iframeResult').contents().find('head'),
                         success = JSHINT(newValue);
 
                     if( success ) {
