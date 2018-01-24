@@ -23,12 +23,21 @@ module.exports = function( grunt ) {
 						'assets/libs/codemirror/codemirror-5.31.0/addon/comment/comment.js',
 						'node_modules/jquery/dist/jquery.min.js',
 						'node_modules/jquery-resizable/resizable.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/lint/lint.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/lint/html-lint.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/lint/css-lint.js',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/lint/javascript-lint.js',
+						'assets/js/_htmlhint.js',
+						'assets/js/_csslint.js',
+						'assets/js/_jshint.js'
+
 					],
 					'./public/style/vendor.css' : [
 						'node_modules/bootstrap/dist/css/bootstrap.min.css',
 						'assets/libs/codemirror/codemirror-5.31.0/lib/codemirror.css',
 						'assets/libs/codemirror/codemirror-5.31.0/theme/material.css',
 						'assets/libs/codemirror/codemirror-5.31.0/addon/fold/foldgutter.css',
+						'assets/libs/codemirror/codemirror-5.31.0/addon/lint/lint.css',
 						'node_modules/jquery-resizable/resizable.css'
 					]
 				}

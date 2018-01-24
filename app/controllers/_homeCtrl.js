@@ -3,7 +3,8 @@ module.exports = function ( moduleApp ) {
     
     function homeCtrl ( $scope, $location ){  
         $scope.config_html = {
-            mode             : "xml",
+            mode             : "text/html",
+            tabMode          : "indent",
             lineNumbers      : true,
             theme            : "material",
             indentWithTabs   : false,
@@ -15,38 +16,33 @@ module.exports = function ( moduleApp ) {
             matchBrackets    : true,
             autoCloseTags    : true,
             lineWrapping     : false,
-            gutters          : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
-            value            : '<!DOCTYPE html>\n' +
-           '<html lang="en">\n'+
-           '<head>\n'+
-                '<meta charset="UTF-8"/>\n'+
-                '<meta name="viewport" content="width=device-width, initial-scale=1.0"/>\n'+
-                '<meta http-equiv="X-UA-Compatible" content="ie=edge"/>\n'+
-                '<title>Document</title>\n'+
-            '</head>\n'+
-            '<body>\n'+   
-            '</body>\n'+
-            '</html>'
+            gutters          : ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+            lint             : true,
+            value            : ''
         };
         $scope.config_css = {
             lineNumbers    : true,
             mode           : "css",
+            tabMode        : "indent",
             theme          : "material",
             indentWithTabs : false,
             foldGutter     : true,
             lineWrapping   : true,
-            gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+            lint           : true,
             value          : '/* Styles go here */'
         }
         $scope.config_js = {
             lineNumbers    : true,
             mode           : "javascript",
             theme          : "material",
+            tabMode        : "indent",
             indentWithTabs : false,
             matchBrackets  : true,
             foldGutter     : true,
             lineWrapping   : true,
-            gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+            gutters        : ["CodeMirror-linenumbers", "CodeMirror-foldgutter", "CodeMirror-lint-markers"],
+            lint           : true,
             value          : '// Scripts go here'
         };
         $scope.codemirrorLoaded = function( _editor ) {
